@@ -268,3 +268,4 @@
                   initASMRTool, initKanjiGame, initDecisionSim, initMemoTool, initCalendarTool ];
   document.addEventListener('DOMContentLoaded', () => inits.forEach(fn => fn()));
 })();
+
