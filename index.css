@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0; padding: 0;
+  background: #f9f9f9;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+header, footer {
+  background: #007acc;
+  color: white;
+  padding: 0.8rem 1rem;
+  text-align: center;
+}
+nav#tab-nav {
+  display: flex;
+  flex-wrap: wrap;
+  background: #eee;
+  border-bottom: 2px solid #007acc;
+}
+nav#tab-nav button {
+  flex: 1 1 10%;
+  min-width: 100px;
+  border: none;
+  background: transparent;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  color: #007acc;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+nav#tab-nav button[aria-selected="true"] {
+  border-bottom-color: #007acc;
+  background: #fff;
+  font-weight: 700;
+  color: #004a99;
+}
+nav#tab-nav button:hover {
+  background: #ddd;
+}
+main {
+  flex-grow: 1;
+  padding: 1rem;
+  background: white;
+  min-height: 70vh;
+  overflow-y: auto;
+}
+.tab-panel {
+  display: none;
+}
+.tab-panel.active {
+  display: block;
+}
+/* --- 各ツールの基本スタイル --- */
+textarea, input, button, select {
+  font-size: 1rem;
+  padding: 0.4rem 0.6rem;
+  margin: 0.2rem 0;
+}
+button {
+  cursor: pointer;
+}
+hr {
+  margin: 1rem 0;
+}
+section.tab-panel > div.tool-section {
+  max-width: 800px;
+  margin: 0 auto;
+}
+/* タイマー数字表示 */
+.timer-display {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 1rem 0;
+}
+/* QRコードキャンバス */
+#qr-canvas {
+  margin-top: 1rem;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+/* カレンダー簡易スタイル */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.3rem;
+}
+.calendar-cell {
+  border: 1px solid #ccc;
+  min-height: 60px;
+  padding: 4px;
+  cursor: pointer;
+  background: #f0f8ff;
+  position: relative;
+  font-size: 0.85rem;
+}
+.calendar-cell.today {
+  border-color: #007acc;
+  background: #d0e7ff;
+  font-weight: 700;
+}
+.calendar-event {
+  position: absolute;
+  bottom: 2px;
+  left: 2px;
+  right: 2px;
+  background: #007acc;
+  color: white;
+  font-size: 0.7rem;
+  padding: 1px 2px;
+  border-radius: 2px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
