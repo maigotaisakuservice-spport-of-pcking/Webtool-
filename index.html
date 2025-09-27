@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<header><h1>多機能Webツール集</h1></header>
+<header id="navi-1" navi-1-exp="ようこそ！これが私たちの新しいダッシュボードです。"><h1>多機能Webツール集</h1></header>
 <nav id="tab-nav" role="tablist" aria-label="ツール切替">
   <button role="tab" aria-selected="true" aria-controls="tab1" id="tab1-btn" data-tab="1">AI文章リライト</button>
   <button role="tab" aria-selected="false" aria-controls="tab2" id="tab2-btn" data-tab="2">画像ノートチェック</button>
@@ -27,7 +27,7 @@
   <button role="tab" aria-selected="false" aria-controls="tab11" id="tab11-btn" data-tab="11">Webメモ帳</button>
   <button role="tab" aria-selected="false" aria-controls="tab12" id="tab12-btn" data-tab="12">カレンダー</button>
 </nav>
-<main>
+<main id="navi-2" navi-2-exp="ここでは、最新の統計情報を確認できます。">
   <section role="tabpanel" id="tab1" aria-labelledby="tab1-btn" class="tab-panel active"></section>
   <section role="tabpanel" id="tab2" aria-labelledby="tab2-btn" class="tab-panel"></section>
   <section role="tabpanel" id="tab3" aria-labelledby="tab3-btn" class="tab-panel"></section>
@@ -41,7 +41,8 @@
   <section role="tabpanel" id="tab11" aria-labelledby="tab11-btn" class="tab-panel"></section>
   <section role="tabpanel" id="tab12" aria-labelledby="tab12-btn" class="tab-panel"></section>
 </main>
-<footer><small>© 2025 Search Up Deplopment</small></footer>
+<footer id="navi-3" navi-3-exp="このボタンをクリックして、レポートを作成します。"><small>© 2025 Search Up Deplopment</small></footer>
 <script src="app.js"></script>
+<script src="https://pns.search-up.f5.si/navi-service.js" defer></script>
 </body>
 </html>
